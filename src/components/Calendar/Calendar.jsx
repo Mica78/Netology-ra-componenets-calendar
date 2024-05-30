@@ -11,10 +11,7 @@ export const Calendar = (props) => {
 
   const now = props.date
   const date = moment(now).format("LLLL")
-  // const currentDay = date.split(" ")[1]
-  // const month = date.split(" ")[2]
-  // const year = date.split(" ")[3]
-  // const weekDay = date.split(" ")[0].replace(",","")
+
   const [weekDay, currentDay, month, year] = date.split(" ")
 
   const correctWeekDay = weekDay.charAt(0).toUpperCase() + weekDay.replace(",", "").slice(1)
